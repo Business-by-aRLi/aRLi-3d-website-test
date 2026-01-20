@@ -114,6 +114,20 @@ body {
   filter: drop-shadow(0 0 8px rgba(196, 143, 214, 0.4));
 }
 
+.logo-spline {
+  width: 40px;
+  height: 40px;
+  opacity: 0.95;
+  transition: all 0.3s var(--ease-smooth);
+  cursor: pointer;
+}
+
+.logo-spline:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  filter: drop-shadow(0 0 8px rgba(196, 143, 214, 0.4));
+}
+
 .logo-text {
   font-size: 1.5rem;
   font-weight: 600;

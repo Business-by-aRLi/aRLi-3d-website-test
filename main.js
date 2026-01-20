@@ -521,6 +521,48 @@ class CTAInteractions {
 }
 
 /* ────────────────────────────────────────────────────────────
+   LOGO SPLINE SCENE
+   ──────────────────────────────────────────────────────────── */
+
+class LogoSpline {
+  constructor() {
+    this.canvas = document.getElementById('logo-canvas');
+    if (!this.canvas) return;
+
+    this.app = null;
+    this.init();
+  }
+
+  async init() {
+    try {
+      this.app = new Application(this.canvas);
+      await this.app.load('https://prod.spline.design/I7gfuvu2YKBPSulG/scene.splinecode');
+
+      // Add subtle rotation on hover
+      this.canvas.addEventListener('mouseenter', () => {
+        gsap.to(this.canvas, {
+          rotationY: 10,
+          duration: 0.6,
+          ease: 'power2.out',
+        });
+      });
+
+      this.canvas.addEventListener('mouseleave', () => {
+        gsap.to(this.canvas, {
+          rotationY: 0,
+          duration: 0.6,
+          ease: 'power2.out',
+        });
+      });
+
+      console.log('✅ Logo Spline loaded');
+    } catch (error) {
+      console.error('Error loading logo Spline:', error);
+    }
+  }
+}
+
+/* ────────────────────────────────────────────────────────────
    ROBOT ICONS (SVG INJECTION)
    ──────────────────────────────────────────────────────────── */
 
@@ -628,6 +670,9 @@ class CustomCursor {
 
 document.addEventListener('DOMContentLoaded', () => {
   console.log('🚀 Initializing aRLi 3D Experience...');
+
+  // Initialize logo Spline
+  const logoSpline = new LogoSpline();
 
   // Inject robot icons
   injectRobotIcons();
