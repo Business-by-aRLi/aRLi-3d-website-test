@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>aRLi | סטודיו טכנולוגי בהובלת נשים</title>
+  <meta name="description" content="סטודיו טכנולוגי שבונה מערכות מותאמות אישית, אוטומציות AI ופלטפורמות דיגיטליות מאפס">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <!-- Navigation -->
+  <nav class="nav">
+    <div class="nav-content">
+      <div class="nav-logo">
+        <svg class="robot-icon" width="40" height="40" viewBox="0 0 100 100">
+          <!-- Robot face icon - will be defined in main.js -->
+        </svg>
+        <span class="logo-text">aRLi</span>
+      </div>
+      <div class="nav-links">
+        <a href="#about" class="nav-link">אודות</a>
+        <a href="#services" class="nav-link">שירותים</a>
+        <a href="#philosophy" class="nav-link">גישה</a>
+        <a href="#contact" class="nav-cta">בואו נבנה</a>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="hero" id="hero">
+    <div class="hero-content">
+      <div class="hero-text">
+        <h1 class="hero-title">
+          <span class="title-line">בונים מערכות</span>
+          <span class="title-line">שחושבות</span>
+        </h1>
+        <p class="hero-subtitle">
+          סטודיו טכנולוגי בהובלת נשים<br>
+          שבונה פלטפורמות מותאמות מאפס
+        </p>
+        <div class="hero-ctas">
+          <a href="#contact" class="cta-primary">התחילו מערכת</a>
+          <a href="#philosophy" class="cta-secondary">הגישה שלנו</a>
+        </div>
+      </div>
+
+      <!-- Spline 3D Scene Container -->
+      <div class="spline-container" id="spline-hero">
+        <canvas id="canvas3d"></canvas>
+      </div>
+    </div>
+
+    <!-- Robot Entity - Brand Presence -->
+    <div class="robot-entity" id="robotEntity">
+      <canvas id="robotCanvas" width="400" height="400"></canvas>
+    </div>
+
+    <!-- Scroll Indicator -->
+    <div class="scroll-indicator">
+      <div class="scroll-line"></div>
+      <span class="scroll-text">גללו למטה</span>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section class="section about-section" id="about">
+    <div class="section-container">
+      <div class="section-content">
+        <div class="section-header">
+          <h2 class="section-title">סטודיו מהעתיד</h2>
+          <div class="section-accent"></div>
+        </div>
+        <div class="about-grid">
+          <div class="about-text">
+            <p class="large-text">
+              aRLi הוא סטודיו טכנולוגי בהובלת נשים שבונה מערכות חכמות מאפס.
+            </p>
+            <p>
+              אנחנו לא משתמשים בתבניות. לא לוקחים קיצורי דרך. כל פלטפורמה שאנחנו בונים מותאמת בדיוק לצורך שלך - מהאסטרטגיה ועד לביצוע.
+            </p>
+          </div>
+          <div class="about-features">
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="60" height="60" viewBox="0 0 100 100">
+                  <circle cx="50" cy="50" r="40" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                  <circle cx="50" cy="50" r="8" fill="var(--accent)"/>
+                </svg>
+              </div>
+              <h3>אסטרטגיה</h3>
+              <p>חשיבה ארכיטקטונית על המערכת שלך</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="60" height="60" viewBox="0 0 100 100">
+                  <path d="M 20 50 L 50 20 L 80 50 L 50 80 Z" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+              </div>
+              <h3>בנייה מאפס</h3>
+              <p>קוד מותאם אישית, אפס תבניות</p>
+            </div>
+            <div class="feature-card">
+              <div class="feature-icon">
+                <svg width="60" height="60" viewBox="0 0 100 100">
+                  <rect x="25" y="25" width="50" height="50" fill="none" stroke="var(--accent)" stroke-width="2"/>
+                  <line x1="50" y1="25" x2="50" y2="75" stroke="var(--accent)" stroke-width="2"/>
+                  <line x1="25" y1="50" x2="75" y2="50" stroke="var(--accent)" stroke-width="2"/>
+                </svg>
+              </div>
+              <h3>אוטומציה חכמה</h3>
+              <p>AI שעובד בשביל העסק שלך</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Services Section -->
+  <section class="section services-section" id="services">
+    <div class="section-container">
+      <div class="section-content">
+        <div class="section-header">
+          <h2 class="section-title">מה אנחנו בונים</h2>
+          <div class="section-accent"></div>
+        </div>
+        <div class="services-grid">
+          <div class="service-item" data-service="1">
+            <div class="service-number">01</div>
+            <h3 class="service-title">מערכות ניהול</h3>
+            <p class="service-description">
+              פלטפורמות ניהול מותאמות אישית - CRM, ERP, כלי ניהול פרויקטים ומערכות פנימיות שמדויקות לתהליכים שלך.
+            </p>
+          </div>
+          <div class="service-item" data-service="2">
+            <div class="service-number">02</div>
+            <h3 class="service-title">אוטומציות AI</h3>
+            <p class="service-description">
+              אינטליגנציה מלאכותית שמשתלבת בתהליכי העבודה, חוסכת זמן ומעלה את הדיוק של הארגון.
+            </p>
+          </div>
+          <div class="service-item" data-service="3">
+            <div class="service-number">03</div>
+            <h3 class="service-title">מערכות עסקיות</h3>
+            <p class="service-description">
+              תשתיות דיגיטליות מלאות - מהארכיטקטורה ועד לממשק, כל שכבה בנויה בהתאמה אישית.
+            </p>
+          </div>
+          <div class="service-item" data-service="4">
+            <div class="service-number">04</div>
+            <h3 class="service-title">מוצרים דיגיטליים</h3>
+            <p class="service-description">
+              פלטפורמות SaaS, אפליקציות ווב, ומוצרים דיגיטליים שבנויים לגדול ולהתרחב.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Philosophy Section -->
+  <section class="section philosophy-section" id="philosophy">
+    <div class="section-container">
+      <div class="section-content">
+        <div class="philosophy-layout">
+          <div class="philosophy-visual">
+            <div class="robot-showcase" id="robotShowcase">
+              <!-- Robot entity showcase -->
+            </div>
+          </div>
+          <div class="philosophy-text">
+            <div class="section-header">
+              <h2 class="section-title">הגישה שלנו</h2>
+              <div class="section-accent"></div>
+            </div>
+            <div class="philosophy-content">
+              <h3 class="philosophy-point">אפס תבניות</h3>
+              <p>
+                כל פרויקט מתחיל מדף ריק. אנחנו לא משתמשים בתבניות מוכנות או פתרונות גנריים. כל שורת קוד נכתבת בהתאמה אישית לצרכים שלך.
+              </p>
+
+              <h3 class="philosophy-point">חשיבה ארכיטקטונית</h3>
+              <p>
+                לפני שכותבים קוד, אנחנו חושבים. אסטרטגיה, ארכיטקטורה, תהליכים - הכל מתוכנן כך שהמערכת תעבוד בדיוק כמו שצריך.
+              </p>
+
+              <h3 class="philosophy-point">בהובלת נשים</h3>
+              <p>
+                aRLi בנוי ומנוהל על ידי נשים. אנחנו מביאים פרספקטיבה שונה לתעשיית הטכנולוגיה - עם דגש על דיוק, אלגנטיות, וחשיבה מערכתית.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact Section -->
+  <section class="section contact-section" id="contact">
+    <div class="section-container">
+      <div class="section-content">
+        <div class="contact-layout">
+          <div class="contact-text">
+            <h2 class="contact-title">בואו נבנה משהו חדש</h2>
+            <p class="contact-subtitle">
+              יש לכם רעיון למערכת? צריכים פלטפורמה מותאמת?<br>
+              בואו נדבר.
+            </p>
+            <div class="contact-ctas">
+              <a href="mailto:hello@arli.studio" class="cta-primary cta-large">דברו איתנו</a>
+            </div>
+          </div>
+          <div class="contact-info">
+            <div class="info-item">
+              <div class="info-label">אימייל</div>
+              <div class="info-value">hello@arli.studio</div>
+            </div>
+            <div class="info-item">
+              <div class="info-label">מיקום</div>
+              <div class="info-value">ישראל, עובדים גלובלית</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="footer-content">
+      <div class="footer-brand">
+        <svg class="robot-icon" width="30" height="30" viewBox="0 0 100 100">
+          <!-- Robot face icon -->
+        </svg>
+        <span class="footer-text">aRLi © 2024</span>
+      </div>
+      <div class="footer-tagline">
+        בונים מערכות מהעתיד
+      </div>
+    </div>
+  </footer>
+
+  <script type="module" src="/main.js"></script>
+</body>
+</html>
